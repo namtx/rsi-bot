@@ -3,6 +3,8 @@ MAINTAINER "namtx.93@gmail.com"
 
 WORKDIR /home
 
+ARG PORT
+
 COPY ta-lib-0.4.0-src.tar.gz .
 RUN tar -xzf ta-lib-0.4.0-src.tar.gz \
     && cd ta-lib \
@@ -18,6 +20,6 @@ COPY . .
 
 ENV LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 
-EXPOSE 5000
+EXPOSE $PORT
 
 CMD [ "python", "./run.py" ]
