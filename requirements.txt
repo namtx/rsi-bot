@@ -1,0 +1,7 @@
+python-binance
+pynum
+pandas
+requests
+fastapi
+uvicorn
+python-dotenv
